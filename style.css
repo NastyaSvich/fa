@@ -1,0 +1,223 @@
+html{
+  height: 0px;
+}
+
+body{
+margin: auto;
+  background: #f5f6f7;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+}
+
+header{
+    margin: 0px;
+    padding: 0px;
+  }
+
+main{
+  margin: 0px;
+}
+
+.header {
+  text-align: center;
+  background:#222935;
+  color: white;
+  font-size: 20px;
+}
+
+h1{
+padding: 0px;
+margin: 0px;
+}
+
+footer {
+    font-family: "Roboto", sans-serif;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: #222935;
+   color: white;
+   padding-left: 150px;
+   height: 50px;
+}
+
+
+.footer-distributed .footer-left p {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  max-width: 180px;
+  margin-right:300px;
+  margin-top:5px;
+}
+
+.footer-distributed .footer-right a {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: right;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-right img {
+padding-right: 10px;
+}
+
+  /*/////////////////////   Search  //////////////// */
+
+div#container {
+  display: table;
+  border: solid black 1px;
+  width: 60%;
+  margin: 50px auto 0;
+}
+
+div#container div.cell {
+  display: table-cell;
+}
+
+div#container div.cell:last-child {
+  width: 1px;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+input[type=search] {
+  margin: 0;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #f8f8f8;
+  border: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+}
+
+.button {
+  line-height: 35px;
+  margin: 0;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background:red;
+  outline: none;
+}
+
+
+/* Ripple magic */
+.button{
+  position: relative;
+  overflow: hidden;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+  /*/////////////////////   Slider  //////////////// */
+
+.swiper-container {
+  width: 60%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.swiper-slide{
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 150px;
+}
+
+#position{
+padding: 3% 30px 130px;
+
+}
+
+#next{
+  right: -2px;
+  color: black;
+  margin-top: -40px;
+}
+
+#prev{
+  left: -2px;
+  color: black;
+  margin-top: -40px;
+}
+
+span.swiper-pagination-bullet{
+background-color: red;
+}
+
+  /*/////////////////////   Card  //////////////// */
+
+.poster{
+  width: 100%;
+  height: 100%;
+}
+
+.onecard{
+color: black;
+font-weight: 600;
+white-space: nowrap;
+}
+
+.onecard:hover{
+color: red;
+}
+
+.mark{
+  width: 20px;
+  height: 20px;
+}
+
+.one{
+color: black;
+font-size: 20px;
+white-space: nowrap;
+}
+
+.onecard:hover{
+cursor: pointer;
+}
+
+.year{
+font-weight: 600;
+}

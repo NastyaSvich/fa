@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+   <h1>MovieSearch</h1>
+    </div>
+  </header>
+
+  <main>
+    <div id='container'>
+      <div class='cell'><input type='search' id ="search" autocomplete="off" autofocus placeholder='Search movie'></div>
+      <div class='cell'><button  onclick="ShowSelection()" class='button append' id = "click">Search</button></div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container" id = "position">
+        <div class="swiper-wrapper" id = "slider"> </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" id="points"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next" id="next" onclick="pages()"></div>
+        <div class="swiper-button-prev" id="prev" onclick="prev()"></div>
+      </div>
+  </main>
+
+  <footer class="footer-distributed">
+    			<div class="footer-right">
+  				<a href="https://github.com/NastyaSvich">NastyaSvich<img width="40px" height="40px" src="resources/github.png" align="left" alt=""</img></a>
+    			</div>
+    			<div class="footer-left">
+  				<p>RS School 2020q1</p>
+  			</div>
+  	</footer>
+
+<script src="scripts/films.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+ <script>
+var appendNumber = 1;
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: false,
+    loopFillGroupWithBlank: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+   </script>
+</body>
+</html>
